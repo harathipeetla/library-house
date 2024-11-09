@@ -33,7 +33,7 @@ This is a React-based Book Finder application that allows users to search for bo
 To run this project locally: 
 -**Clone the repository**:
 ```bash
-git clone https://github.com/your-username/book-finder-app.git
+git clone https://github.com/harathipeetla/book-library.git
 cd library-house 
 ```
 
