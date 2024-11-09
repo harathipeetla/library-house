@@ -1,0 +1,21 @@
+.header-container{
+    display: flex;
+    background-color: #3c5057;
+    justify-content: space-between;
+    color: #FFF;
+    padding: 1em;
+}
+.logo{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.list-container{
+    display: flex;
+}
+
+.list-container li{
+    list-style-type: none;
+    margin: 1em;
+}
+

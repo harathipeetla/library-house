@@ -1,0 +1,43 @@
+.booklist-container{
+    text-align: center;
+}
+
+.header-h1{
+    color: #3c5057;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.pagination{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 5em;
+    background-color: #3c5057;
+    padding:2em;
+    border-radius: 1em;
+}
+
+.pagination button{
+    background-color: #568090;
+    color: #FFF;
+    padding: 0.5em 1em 0.5em 1em;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+}
+
+.page-nums{
+    color: #FFF;
+    font-size: 22px;
+    font-weight: 500;
+    
+
+}
+
+@media (max-width: 767px){
+    .pagination{
+        margin: 5em 1em 5em 1em;
+    }
+}
+

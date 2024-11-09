@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+# Book Finder App 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React-based Book Finder application that allows users to search for boooks by title and browse with pagination. The app uses the Open library API to fetch book data based on user search input.
 
-## Available Scripts
+# FEATURES
+-**Search by Title** :
+    users can search for books by title  using a search bar.
+-**Random Initial Search**:   
+    When the app loads, it initializes a random searxh term to disply books from various genres.
+-**Pagination**:
+    users can navigate between pages to view more books.
+-**Modular Componenets**:
+    The app is built using modular components for ease of maintainace and scalability.
 
-In the project directory, you can run:
 
-### `npm start`
+### Project Structure:
+```php
+├── public/                     # Public assets and HTML template
+├── src/
+│   ├── components/
+│   │   ├── Banner              # Component to display banner of the page
+│   │   ├── BookCard            # Component to display the card of a book
+│   │   ├── BookList            # component to disply the list of books and to disply pagination
+│   │   ├── Header              #Component to disply the header section of the page
+|   |   ├── SearchFormn         # Component to disply the Search bar section of the page
+│   ├── App.js                  # Main application component
+│   ├── index.js                # Application entry point
+│   └── index.css               # Main stylesheet
+└── README.md 
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# INSTALLATION
+To run this project locally: 
+-**Clone the repository**:
+```bash
+git clone https://github.com/your-username/book-finder-app.git
+cd library-house 
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+-**Install dependencies**:
+```bash 
+npm install
+```
 
-### `npm test`
+-**Start the application**:
+```bash 
+npm start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The app should now be running on http://localhost:3000.
 
-### `npm run build`
+# Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-**Search for Books**:
+Type in the search bar and hit Enter or click the search button to fetch books by title.
+-**Pagination**:
+Use the "Prev" and "Next" buttons to navigate through pages of results.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## API Reference
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This project uses the Open Library API to fetch book data. The API endpoint for searching books by title is as follows
 
-### `npm run eject`
+```bash 
+https://openlibrary.org/search.json?title=${searchTerm}&limit=${booksPerPage}&offset=${offset}
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Parameters
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **searchTerm**: (*string*) The keyword or title of the book(s) you want to search for. This value is dynamically set based on user input in the search bar.
+- **booksPerPage**: (*integer*) Limits the number of results returned per page. This project defaults to 12 books per page.
+- **offset**: (*integer*) Specifies the number of results to skip, calculated as `(page - 1) * booksPerPage`. Used for pagination.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Example Request
 
-## Learn More
+To search for books with "science" in the title:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
